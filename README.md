@@ -1,2 +1,2 @@
 # AmazingMovie 
-This Website under devlopmentt
+This Website is under devlopmentt
