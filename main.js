@@ -8,7 +8,6 @@ async function getMovieNews() {
     let response = await fetch(movie_url);
     let data = await response.json();
     let articles = await data['articles'];
-    let i = 0;
     ihtml = '';
     for (let i = 0; i < 6; i++) {
         ihtml += ` <div class="card mx-lg-4 my-4 justify-content-md-center  d-md-flex" style="width: 24rem;">
