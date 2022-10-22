@@ -25,10 +25,11 @@ async function getMovieNews() {
 }
 //cath error
 getMovieNews().catch((error) => {
-    console.log('error');
+    console.log(error);
 })
 // main Movie News api genretor----------------------------------->
 let movie_main = document.getElementById('movie_main');
+console.log(movie_main);
 async function getMovieMain() {
     let response = await fetch(movie_url);
     let data = await response.json();
@@ -49,7 +50,7 @@ async function getMovieMain() {
 
 }
 getMovieMain().catch((error) => {
-    console.log('error');
+    console.log(error);
 })
 // if index.html is lodad then run getMovieNews function else if movie_news.html is lodad then run getMovieMain function
 if (features_headline) {
@@ -61,6 +62,7 @@ function more_news_button() {
     window.location.href = "movie_news.html";
 }
 //--------------------------------------------------------------------------------------------------------->
+
 
 window.onload = function () {
     console.log("Under Construction");
