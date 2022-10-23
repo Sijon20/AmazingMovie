@@ -4,15 +4,33 @@ function init() {
     /* Ready. Make a call to gapi.auth2.init or some other API */
   });
 }
-// get gapi.auth2 from the google api-
-const auth2 = gapi.auth2.getAuthInstance();
-window.gapi.auth2.init({
-  clientId:'154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
-  scope: "email",
-  plugin_name:'amazing movie'
-}).catch(function(err){
-  console.log('err');
-});
+const onResponse = async ({ credential }) => {
+  // send `credential` to backend
+}
+
+const onClick = () => {
+  window.google.accounts.id.initialize({
+    client_id: '154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com', // here's your Google ID
+    callback: onResponse,
+    auto_select: false
+  })
+  window.google.accounts.id.prompt()
+}
+
+return <button onClick={onClick}>Sign in with Google</button>
+import { OAuth2Client } from 'google-auth-library'
+
+
+async function verify (idToken) {
+  const ticket = await client.verifyIdToken({
+    idToken,
+    audience: clientId
+  })
+  return ticket.getPayload()
+}
+
+// user data, like payload.email, etc.
+const payload = await verify(credential)
 async function onSignIn() {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
@@ -101,8 +119,3 @@ async function onSignIn() {
 //     window.location.href = "movie_news.html";
 // }
 // //--------------------------------------------------------------------------------------------------------->
-
-
-window.onload = function () {
-    console.log("Under Construction");
-}
