@@ -21,7 +21,7 @@ async function onSignIn() {
     console.log(Name);
     user_img.src = Image;
   }
-  onSignIn(googleUser).catch((error) => {
+  onSignIn().catch((error) => {
     console.log('error');
   });
   function signOut() {
