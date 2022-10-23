@@ -1,4 +1,4 @@
-
+let user_img = document.getElementById("user_img");
 async function onSignIn(googleUser) {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
@@ -7,6 +7,7 @@ async function onSignIn(googleUser) {
     let Image = await profile.getImageUrl();
     console.log("sing in");
     console.log(Name);
+    user_img.src = Image;
   }
   onSignIn(googleUser).catch((error) => {
     console.log('error');
