@@ -1,20 +1,26 @@
 
 async function onSignIn(googleUser) {
-    var profile = googleUser.getBasicProfile();
-    let ID = profile.getId();
-    let Name = profile.getName();
-    let Email = profile.getEmail();
-    let Image = profile.getImageUrl();
+    var profile = await googleUser.getBasicProfile();
+    let ID = await profile.getId();
+    let Name = await profile.getName();
+    let Email = await profile.getEmail();
+    let Image = await profile.getImageUrl();
     console.log("sing in");
     console.log(Name);
   }
-  
+  onSignIn(googleUser).catch((error) => {
+    console.log('error');
+  });
   function signOut() {
     var auth2 = gapi.auth2.getAuthInstance();
     auth2.signOut().then(function () {
       console.log('User signed out.');
     });
   }
+  signOut().catch(function(error) {
+    console.log('error');
+  });
+  
 
 //helo
 //--------------------------------------Movie News SEC------------------------------------------------------------------->
