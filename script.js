@@ -1,9 +1,9 @@
 let user_img = document.getElementById("user_img");
-window.gapi.client.init({
-  clientId: '154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
-  scope: 'email',
-  plugin_name: 'amazing movie'
-})
+function init() {
+  gapi.load('auth2', function() {
+    /* Ready. Make a call to gapi.auth2.init or some other API */
+  });
+}
 
 async function onSignIn(googleUser) {
     var profile = await googleUser.getBasicProfile();
