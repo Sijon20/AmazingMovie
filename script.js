@@ -1,10 +1,15 @@
 let user_img = document.getElementById("user_img");
-window.gapi.client
-        .init({
-          clientId:'154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
-          scope: "freefiar99@gmail.com",
-          plugin_name:'amazing movie '
-        })
+window.gapi.load('client:auth2', () => {
+  window.gapi.client.init({
+      clientId: '154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
+      scope: 'email',
+      plugin_name: 'amazing movie'
+  }).then(() => {
+      this.auth = window.gapi.auth2.getAuthInstance();
+      this.setState({isSignedIn: this.auth.isSignedIn.get()})
+  });
+});
+
 async function onSignIn(googleUser) {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
