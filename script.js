@@ -4,7 +4,7 @@ function init() {
     /* Ready. Make a call to gapi.auth2.init or some other API */
   });
 }
-// get gapi.auth2 from the google api
+// get gapi.auth2 from the google api-
 const auth2 = gapi.auth2.getAuthInstance();
 window.gapi.auth2.init({
   clientId:'154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
