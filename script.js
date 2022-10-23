@@ -17,7 +17,7 @@ const onClick = () => {
   window.google.accounts.id.prompt()
 }
 
-return <button onClick={onClick}>Sign in with Google</button>
+// return <button onClick={onClick}>Sign in with Google</button>
 import { OAuth2Client } from 'google-auth-library'
 
 
