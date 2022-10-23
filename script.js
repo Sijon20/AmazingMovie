@@ -9,6 +9,7 @@ async function onSignIn(googleUser) {
     let Email = profile.getEmail();
     let Image = profile.getImageUrl();
     console.log("sing in");
+    console.log(Name);
   }
   
   function signOut() {
