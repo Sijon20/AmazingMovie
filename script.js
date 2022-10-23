@@ -46,7 +46,6 @@ getMovieNews().catch((error) => {
 })
 // main Movie News api genretor----------------------------------->
 let movie_main = document.getElementById('movie_main');
-console.log(movie_main);
 async function getMovieMain() {
     let response = await fetch(movie_url);
     let data = await response.json();
