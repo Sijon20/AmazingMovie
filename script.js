@@ -1,4 +1,10 @@
 let user_img = document.getElementById("user_img");
+window.gapi.client
+        .init({
+          clientId:'154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
+          scope: "freefiar99@gmail.com",
+          plugin_name:'amazing movie '
+        })
 async function onSignIn(googleUser) {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
