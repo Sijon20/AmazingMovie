@@ -5,7 +5,7 @@ function init() {
   });
 }
 
-async function onSignIn(googleUser) {
+async function onSignIn() {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
     let Name = await profile.getName();
