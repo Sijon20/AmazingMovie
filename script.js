@@ -4,7 +4,13 @@ function init() {
     /* Ready. Make a call to gapi.auth2.init or some other API */
   });
 }
-
+window.gapi.auth2.init({
+  clientId:'154419854650-4q7vcella2pdegim4iv6fght37jdf9v7.apps.googleusercontent.com',
+  scope: "email",
+  plugin_name:'amazing movie'
+}).catch(function(err){
+  console.log('err');
+});
 async function onSignIn() {
     var profile = await googleUser.getBasicProfile();
     let ID = await profile.getId();
