@@ -10,7 +10,7 @@ const options = {
 
  async function news (){
 
-  let response = await fetch('https://myallies-breaking-news-v1.p.rapidapi.com/GetTopNews', options);
+  let response = await fetch('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=de956870374a4e9a88c176aefc84a70d');
 	let data = await response.json();
     console.log(data);
     ihtml = '';
@@ -28,5 +28,5 @@ const options = {
     // }
 }
 //catch error
-news().catch(err => console.log(err));
+news().catch(err => console.log('err'));
 news.call();
