@@ -12,7 +12,7 @@ async function news() {
 
   let response = await fetch('https://real-time-news-data.p.rapidapi.com/top-headlines?country=in&lang=en', options);
   let data = await response.json();
-  console.log(data,);
+  console.log(data);
   ihtml = '';
   for (let i = 0; i < 6; i++) {
     if (data[i].photo_url == null) {
