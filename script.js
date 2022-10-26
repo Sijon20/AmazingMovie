@@ -19,9 +19,9 @@ async function news() {
         <img src="${data[i].photo_url}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${data[i].title}</h5>
-           <a href="${data[i].sub_articles[0].link}" class="text-dark "> <p class="card-text"> Sub Title 1 =>${data.[i].sub_articles[0].title}</p></a>
-           <a href="${data[i].sub_articles[1].link}" class="text-dark "><p class="card-text"> Sub Title 2 =>${data.[i].sub_articles[1].title}</p></a>
-           <a href="${data[i].sub_articles[2].link}" class="text-dark"><p class="card-text"> Sub Title 3 =>${data.[i].sub_articles[2].title}</p></a>
+           <a href="${data[i].sub_articles[0].link}" class="text-dark "> <p class="card-text"> Sub Title 1 =>${data[i].sub_articles[0].title}</p></a>
+           <a href="${data[i].sub_articles[1].link}" class="text-dark "><p class="card-text"> Sub Title 2 =>${data[i].sub_articles[1].title}</p></a>
+           <a href="${data[i].sub_articles[2].link}" class="text-dark"><p class="card-text"> Sub Title 3 =>${data[i].sub_articles[2].title}</p></a>
            <p class="card-text"> Publish Date${data[i].published_datetime_utc}</p>
           <a href="${data[i].link}" class="btn btn-primary">Read</a>
         </div>
