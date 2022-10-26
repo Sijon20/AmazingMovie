@@ -27,3 +27,4 @@ const options = {
     //     movie_news.innerHTML = ihtml;
     // }
 }
+news.call();
