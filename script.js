@@ -34,5 +34,5 @@ async function news() {
     movie_news.innerHTML = ihtml;
   }
 //catch error
-news().catch(err => console.log('err'));
+news().catch(err => console.log('errror', err));
 news();
