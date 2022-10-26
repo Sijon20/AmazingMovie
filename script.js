@@ -4,13 +4,13 @@ const options = {
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': 'ef53590809msh14d61dddd35272fp1fce04jsn6ac40ed83c8d',
-		'X-RapidAPI-Host': 'myallies-breaking-news-v1.p.rapidapi.com'
+		'X-RapidAPI-Host': 'real-time-news-data.p.rapidapi.com'
 	}
 };
 
  async function news (){
 
-  let response = await fetch('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=de956870374a4e9a88c176aefc84a70d');
+  let response = await fetch('https://real-time-news-data.p.rapidapi.com/top-headlines?country=in&lang=en', options);
 	let data = await response.json();
     console.log(data);
     ihtml = '';
