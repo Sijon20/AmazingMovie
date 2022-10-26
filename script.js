@@ -28,6 +28,8 @@ async function getMovieNews() {
 getMovieNews().catch((error) => {
     console.log(error);
 })
+//call getMovieNews function
+getMovieNews();
 // main Movie News api genretor----------------------------------->
 // let movie_main = document.getElementById('movie_main');
 // async function getMovieMain() {
