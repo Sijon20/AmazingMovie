@@ -15,6 +15,7 @@ async function news() {
   console.log(data);
   ihtml = '';
   for (let i = 0; i < 6; i++) {
+    
     if (data[i].photo_url == null) {
       data[i].photo_url = 'https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg';
     }
