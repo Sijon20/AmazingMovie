@@ -15,8 +15,12 @@ async function news() {
   console.log(data,);
   ihtml = '';
   for (let i = 0; i < 6; i++) {
+    if (data[i].photo_url == null) {
+      data[i].photo_url = 'https://www.thermaxglobal.com/wp-content/uploads/2020/05/image-not-found.jpg';
+    }
+    }
     ihtml += ` <div class="card mx-lg-4 my-4 justify-content-md-center  d-md-flex" style="width: 24rem;">
-        <img src="${data[i].photo_url}" class="card-img-top" alt="...">
+        <img src="${photo}" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title">${data[i].title}</h5>
            <a href="${data[i].sub_articles[0].link}" class="text-dark "> <p class="card-text"> Sub Title 1 =>${data[i].sub_articles[0].title}</p></a>
